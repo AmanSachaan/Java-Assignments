@@ -3,8 +3,9 @@
  alphabet a-z (case-insensitive). Write time and space complexity of your solution as
  comments in the source file.
 */
+package Assignment2;
 import java.util.Scanner;
-public class Assignment2 {
+public class CheckInput {
     public boolean checkInput(String input) {
         input=input.toLowerCase();
         boolean charIndex[]=new boolean[26];
@@ -24,22 +25,22 @@ public class Assignment2 {
             return true;
         else
             return false;
-        }
+    }
 
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a input String");
         String input = scanner.next();
-        Assignment2 assignment2 = new Assignment2();
-        if(assignment2.checkInput(input))
+        CheckInput checkInput=new CheckInput();
+        if(checkInput.checkInput(input))
             System.out.println("the input string contains all the letters of the alphabet a-z (case-insensitive). ");
         else
-        System.out.println("the input string does not contains all the letters of the alphabet a-z (case-insensitive). ");
+            System.out.println("the input string does not contains all the letters of the alphabet a-z (case-insensitive). ");
     }
 }
 
 
 /*
-    Time Complexity : O(n)  where n is the length of the input String (n=26)
+    Time Complexity : O(n)  where n is the length of the input String.
     Space Complexity :O(1)
 */
